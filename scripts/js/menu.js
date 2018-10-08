@@ -8,7 +8,7 @@ Affiche le menu
 */
 function showMenu(){
 	
-
+$('#menu').append('<a class="menuElement" href="index.html"> Accueil </a>');
 $('#menu').append('<div class="dropdown"> <a class="menuElement" href="Projets.html"> Projets </a></div>')
 $('.dropdown').append('<div class="dropdown-content">');
 $('.dropdown-content').append('<a href="./projets/2048.html"> 2048 </a></br>');
