@@ -1,9 +1,9 @@
 
 $(document).ready(function() {
-	alert("hello")
+	alert("hello");
 	showMenu();
-	alert("Finished")
-}
+	alert("Finished");
+})
 
 /*
 Affiche le menu
