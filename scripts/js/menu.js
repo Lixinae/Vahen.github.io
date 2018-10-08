@@ -1,8 +1,8 @@
 
 $(document).ready(function() {
-	
+	alert("hello")
 	showMenu();
-	
+	alert("Finished")
 }
 
 /*
