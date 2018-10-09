@@ -8,7 +8,7 @@ $(document).ready(function(){
 	createClickableLoadPage('#MenuPlatform',"/pages/projets/PlatformGame.html");
 	createClickableLoadPage('#MenuContact',"/pages/Contact.html");
 	createClickableLoadPage('#MenuWhoAmI',"/pages/WhoAmI.html");
-}
+});
 
 /*
 Affiche le menu
