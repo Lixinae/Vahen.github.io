@@ -45,5 +45,4 @@ function createClickableLoadPage(id,url,title){
 			document.location.href = url;
 		}*/
     });
-
 }

@@ -1,8 +1,8 @@
 $(document).ready(function(){
-	createClickableLoadPage('#Menu2048',"/pages/projets/2048.html","2048");
-	createClickableLoadPage('#MenuMrWheel',"/pages/projets/MrWheelAdventure.html","MrWheelAdventure");
-	createClickableLoadPage('#MenuPacman',"/pages/projets/Pacman3d.html","Pacman3D");
-	createClickableLoadPage('#MenuPlatform',"/pages/projets/PlatformGame.html","PlatformGame");
+	createClickableLoadPage('#Content2048',"/pages/projets/2048.html","2048");
+	createClickableLoadPage('#ContentMrWheel',"/pages/projets/MrWheelAdventure.html","MrWheelAdventure");
+	createClickableLoadPage('#ContentPacman',"/pages/projets/Pacman3d.html","Pacman3D");
+	createClickableLoadPage('#ContentPlatform',"/pages/projets/PlatformGame.html","PlatformGame");
 });
 
 /*
