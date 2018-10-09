@@ -1,4 +1,14 @@
-
+$(document).ready(function(){
+	showMenu();
+	createClickableLoadPage('#MenuIndex',"/index.html");
+	createClickableLoadPage('#MenuProjet',"/pages/Projets.html");
+	createClickableLoadPage('#Menu2048',"/pages/projets/2048.html");
+	createClickableLoadPage('#MenuMrWheel',"/pages/projets/MrWheelAdventure.html");
+	createClickableLoadPage('#MenuPacman',"/pages/projets/Pacman3d.html");
+	createClickableLoadPage('#MenuPlatform',"/pages/projets/PlatformGame.html");
+	createClickableLoadPage('#MenuContact',"/pages/Contact.html");
+	createClickableLoadPage('#MenuWhoAmI',"/pages/WhoAmI.html");
+}
 
 /*
 Affiche le menu
@@ -30,5 +40,4 @@ function createClickableLoadPage(id,url){
         console.log('test');
         $("#content").load(url);
     });
-	
 }
