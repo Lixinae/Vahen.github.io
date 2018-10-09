@@ -1,13 +1,13 @@
 $(document).ready(function(){
 	showMenu();
-	createClickableLoadPage('#MenuIndex',"/index.html");
-	createClickableLoadPage('#MenuProjet',"/pages/Projets.html");
-	createClickableLoadPage('#Menu2048',"/pages/projets/2048.html");
-	createClickableLoadPage('#MenuMrWheel',"/pages/projets/MrWheelAdventure.html");
-	createClickableLoadPage('#MenuPacman',"/pages/projets/Pacman3d.html");
-	createClickableLoadPage('#MenuPlatform',"/pages/projets/PlatformGame.html");
-	createClickableLoadPage('#MenuContact',"/pages/Contact.html");
-	createClickableLoadPage('#MenuWhoAmI',"/pages/WhoAmI.html");
+	createClickableLoadPage('#MenuIndex',"/index.html","Accueil");
+	createClickableLoadPage('#MenuProjet',"/pages/Projets.html","Projets");
+	createClickableLoadPage('#Menu2048',"/pages/projets/2048.html","2048");
+	createClickableLoadPage('#MenuMrWheel',"/pages/projets/MrWheelAdventure.html","MrWheelAdventure");
+	createClickableLoadPage('#MenuPacman',"/pages/projets/Pacman3d.html","Pacman3D");
+	createClickableLoadPage('#MenuPlatform',"/pages/projets/PlatformGame.html","PlatformGame");
+	createClickableLoadPage('#MenuContact',"/pages/Contact.html","Contact");
+	createClickableLoadPage('#MenuWhoAmI',"/pages/WhoAmI.html","WhoAmI");
 });
 
 /*
@@ -34,10 +34,15 @@ $('#menu').append('<a id="MenuWhoAmI" class="menuElement" href="Javascript:void(
 /*
 Charge une page sans recharger la page
 */
-function createClickableLoadPage(id,url){
+function createClickableLoadPage(id,url,title){
 	$(id).on('click', function(e){
         e.preventDefault();
         console.log('test');
         $("#content").load(url);
     });
+	if (history.pushState) {
+	  window.history.pushState("", title, url);
+	} else {
+	  document.location.href = url;
+	}
 }
