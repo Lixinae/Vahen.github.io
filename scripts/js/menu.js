@@ -37,12 +37,13 @@ Charge une page sans recharger la page
 function createClickableLoadPage(id,url,title){
 	$(id).on('click', function(e){
         e.preventDefault();
-        console.log('test');
         $("#content").load(url);
+		// Pour modifier l'url sans recharger
+		/*if (history.pushState) {
+			window.history.pushState("", title, url);
+		} else {
+			document.location.href = url;
+		}*/
     });
-	if (history.pushState) {
-	  window.history.pushState("", title, url);
-	} else {
-	  document.location.href = url;
-	}
+
 }
