@@ -14,9 +14,11 @@ $(document).ready(function(){
 Affiche le menu
 */
 function showMenu(){
-	
-$('#menu').append('<a id="MenuIndex" class="menuElement" href="Javascript:void(0);"> Accueil </a>');
-$('#menu').append('<div class="dropdown"> <a id="MenuProjet" class="menuElement" href="Javascript:void(0);"> Projets </a></div>');
+$('#menu').append('<ul>');
+
+$('#menu').append('<li class="menuElement"><a id="MenuIndex" href="Javascript:void(0);"> Accueil </a></li>');
+
+$('#menu').append('<li class="menuElement"><div class="dropdown"> <a id="MenuProjet" href="Javascript:void(0);"> Projets </a></div></li>');
 
 $('.dropdown').append('<div class="dropdown-content">');
 $('.dropdown-content').append('<a id="Menu2048" href="Javascript:void(0);"> 2048 </a></br>');
@@ -25,10 +27,10 @@ $('.dropdown-content').append('<a id="MenuPacman" href="Javascript:void(0);"> Pa
 $('.dropdown-content').append('<a id="MenuPlatform" href="Javascript:void(0);"> PlatformGame </a></br>');
 $('.dropdown').append('</div>');
 
-$('#menu').append('<a id="MenuContact" class="menuElement" href="Javascript:void(0);"> Contact </a>');
+$('#menu').append('<li class="menuElement"><a id="MenuContact" href="Javascript:void(0);"> Contact </a></li>');
+$('#menu').append('<li class="menuElement"><a id="MenuWhoAmI" href="Javascript:void(0);"> Qui suis je ? </a></li>');	
 
-$('#menu').append('<a id="MenuWhoAmI" class="menuElement" href="Javascript:void(0);"> Qui suis je ? </a>');	
-	
+$('#menu').append('</ul>');
 }
 
 /*

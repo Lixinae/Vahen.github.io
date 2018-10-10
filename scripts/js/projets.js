@@ -11,6 +11,7 @@ Copie de la fonction dans menu js -> doit etre changé plus tard
 function createClickableLoadPage(id,url,title){
 	$(id).on('click', function(e){
         e.preventDefault();
+		
         $("#content").load(url);
 		// Pour modifier l'url sans recharger
 		/*if (history.pushState) {
