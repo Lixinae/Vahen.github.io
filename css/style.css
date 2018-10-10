@@ -26,28 +26,32 @@ html, body, * {
 #menu{
 	background:lightGray;
 	text-align: center;
+	height: 34px;
 }
 
 .menuElement{
 	/*position:relative;*/
 	display:inline-block;
-	padding: 8px 16px;
+/* 	padding: 8px 16px; */
 	color:black;
+	line-height: 34px;
 }
 
 .menuElement a{
 	text-decoration: none;
 	color:black;
+	padding: 8px 16px;
 }
 
 .menuElement a:hover{
 	color: white;
+	background-color: #555;
 }
 
-.menuElement:hover{
+/* .menuElement:hover{
 	background-color: #555;
     color: white;
-}
+} */
 
 .projectLink{
 	display: block;
