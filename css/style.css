@@ -78,7 +78,11 @@ html, body, * {
 }
 
 .dropdown:hover .dropdown-content{
-    display: block;
+    display: flex;
+	flex-direction: column;
+}
+.dropdown:hover .dropdown-content a {
+    padding:0;
 }
 .dropdown-content a:hover{
 	background-color: #555;
