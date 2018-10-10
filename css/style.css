@@ -41,6 +41,7 @@ html, body, * {
 	text-decoration: none;
 	color:black;
 	padding: 8px 16px;
+	white-space: nowrap;
 }
 
 .menuElement a:hover{
