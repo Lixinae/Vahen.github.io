@@ -29,8 +29,16 @@
 			<a class="projectLink" id="ContentPacman" href="Javascript:void(0);"> Pacman 3D </a></br>
 			<a class="projectLink" id="ContentPlatform" href="Javascript:void(0);"> PlatformGame </a></br>
 		
-		
-			<script type="text/javascript" src="/scripts/js/projets.js"></script>
+			<!-- Regler le bug sur le chargement des fonctions -->
+			<script type="text/javascript" src="/scripts/js/projets.js">
+				function loadAll(){
+					createClickableLoadPage('#Content2048',"/pages/projets/2048.html","2048");
+					createClickableLoadPage('#ContentMrWheel',"/pages/projets/MrWheelAdventure.html","MrWheelAdventure");
+					createClickableLoadPage('#ContentPacman',"/pages/projets/Pacman3d.html","Pacman3D");
+					createClickableLoadPage('#ContentPlatform',"/pages/projets/PlatformGame.html","PlatformGame");
+				};
+				load();
+			</script>
 		</div>
 	</body>
 
