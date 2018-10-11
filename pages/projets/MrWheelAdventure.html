@@ -3,16 +3,32 @@
     <head>
         <meta charset="utf-8"/>
         <title>MrWheelAdventure</title>
+        <link rel="stylesheet" href="/css/style.css"/>
+		<script type="text/javascript" src="/scripts/libs/jquery-3.3.1.min.js"></script> 
     </head>
 	<body>
-		Nom : MrWheelAdventure </br>
-		Langages : C# </br>
-		Outils : Unity </br>
-		Gallerie de screenshot : [Comment faire une galerie ?] </br>
-		Liens sur github : [Liens github] </br>
-		Liens de l'executable : [Sur dropbox ou autre] </br>
-		Descripion : [Descripion du projet] </br>
-		Notes : [Notes sur le projet] </br>
+	
+		<!-- Header content -->
+		<script type="text/javascript"> 
+			$(function(){
+			  $("#headerContent").load("/pages/Header.html"); 
+			});
+		</script>
+		<div id="headerContent"> </div>
+		<!-- /Header content -->
+		
+		
+		<div class="bodyContent">
+			<h3> MrWheelAdventure </h3>
+				Nom : MrWheelAdventure </br>
+				Langages : C# </br>
+				Outils : Unity </br>
+				Gallerie de screenshot : [Comment faire une galerie ?] </br>
+				Liens sur github : [Liens github] </br>
+				Liens de l'executable : [Sur dropbox ou autre] </br>
+				Descripion : [Descripion du projet] </br>
+				Notes : [Notes sur le projet] </br>
+		</div>
 	</body>
 
 </html>

@@ -12,13 +12,12 @@ function createClickableLoadPage(id,url,title){
 	$(id).on('click', function(e){
         e.preventDefault();
 		
-        $("#content").load(url);
+        $(" .bodyContent").load(url + " .bodyContent");
 		// Pour modifier l'url sans recharger
-		/*if (history.pushState) {
+		if (history.pushState) {
 			window.history.pushState("", title, url);
 		} else {
 			document.location.href = url;
-		}*/
+		}
     });
-
 }

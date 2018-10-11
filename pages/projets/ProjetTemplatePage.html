@@ -3,17 +3,31 @@
     <head>
         <meta charset="utf-8"/>
         <title>[Nom Projet]</title>
+        <link rel="stylesheet" href="/css/style.css"/>
+		<script type="text/javascript" src="/scripts/libs/jquery-3.3.1.min.js"></script> 
     </head>
 	<body>
-	
-		Nom : [Nom projet] </br>
-		Langages : [Lanages utilisé] </br>
-		Outils : [Unity ou fait main etc...] </br>
-		Gallerie de screenshot : [Comment faire une galerie ?] </br>
-		Liens sur github : [Liens github] </br>
-		Liens de l'executable : [Sur dropbox ou autre] </br>
-		Descripion : [Descripion du projet] </br>
-		Notes : [Notes sur le projet] </br>
+		<!-- Header content -->
+		<script type="text/javascript"> 
+			$(function(){
+			  $("#headerContent").load("/pages/Header.html"); 
+			});
+		</script>
+		<div id="headerContent"> </div>
+		<!-- /Header content -->
+		
+		
+		<div class="bodyContent">
+			<h3> [Nom du projet] </h3>	
+				Nom : [Nom projet] </br>
+				Langages : [Lanages utilisé] </br>
+				Outils : [Unity ou fait main etc...] </br>
+				Gallerie de screenshot : [Comment faire une galerie ?] </br>
+				Liens sur github : [Liens github] </br>
+				Liens de l'executable : [Sur dropbox ou autre] </br>
+				Descripion : [Descripion du projet] </br>
+				Notes : [Notes sur le projet] </br>
+		</div>
 	</body>
 
 </html>

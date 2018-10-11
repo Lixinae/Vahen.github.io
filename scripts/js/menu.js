@@ -14,6 +14,8 @@ $(document).ready(function(){
 Affiche le menu
 */
 function showMenu(){
+
+$('#menu').html('');
 $('#menu').append('<ul>');
 
 $('#menu').append('<li class="menuElement"><a id="MenuIndex" href="Javascript:void(0);"> Accueil </a></li>');
@@ -39,12 +41,12 @@ Charge une page sans recharger la page
 function createClickableLoadPage(id,url,title){
 	$(id).on('click', function(e){
         e.preventDefault();
-        $("#content").load(url);
+        $(".bodyContent").load(url + " .bodyContent");
 		// Pour modifier l'url sans recharger
-		/*if (history.pushState) {
+		if (history.pushState) {
 			window.history.pushState("", title, url);
 		} else {
 			document.location.href = url;
-		}*/
+		}
     });
 }

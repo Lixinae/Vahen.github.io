@@ -3,9 +3,23 @@
     <head>
         <meta charset="utf-8"/>
         <title>Qui suis-je ?</title>
+		<link rel="stylesheet" href="/css/style.css"/>
+		<script type="text/javascript" src="/scripts/libs/jquery-3.3.1.min.js"></script> 
     </head>
 	<body>
-		Qui suis-je ?
+		<!-- Header content -->
+		<script type="text/javascript"> 
+			$(function(){
+			  $("#headerContent").load("/pages/Header.html"); 
+			});
+		</script>
+		<div id="headerContent"> </div>
+		<!-- /Header content -->
+		
+		
+		<div class="bodyContent">
+			<h3>Qui suis-je ?</h3>
+		</div>
 	</body>
 
 </html>

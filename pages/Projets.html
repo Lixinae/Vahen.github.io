@@ -4,21 +4,34 @@
     <head>
         <meta charset="utf-8"/>
         <title>Projets</title>
+        <link rel="stylesheet" href="/css/style.css"/>
+		<script type="text/javascript" src="/scripts/libs/jquery-3.3.1.min.js"></script> 
     </head>
 	<body>
+		<!-- Header content -->
+		<script type="text/javascript"> 
+			$(function(){
+			  $("#headerContent").load("/pages/Header.html"); 
+			});
+		</script>
+		<div id="headerContent"> </div>
+		<!-- /Header content -->
 		
+		
+		<div class="bodyContent">
+			<h3> Projets </h3>
 		<!-- Avoir la liste sur le coté et une mini-présentation de chacun-->
 		<!-- Description plus complete de chacun sur leur pages respectives -->
 
-		<a class="projectLink" id="Content2048" href="Javascript:void(0);"> 2048 </a></br>
+			<a class="projectLink" id="Content2048" href="Javascript:void(0);"> 2048 </a></br>
+			
+			<a class="projectLink" id="ContentMrWheel" href="Javascript:void(0);"> Mr Wheel Adventure </a></br>
+			<a class="projectLink" id="ContentPacman" href="Javascript:void(0);"> Pacman 3D </a></br>
+			<a class="projectLink" id="ContentPlatform" href="Javascript:void(0);"> PlatformGame </a></br>
 		
-		<a class="projectLink" id="ContentMrWheel" href="Javascript:void(0);"> Mr Wheel Adventure </a></br>
-		<a class="projectLink" id="ContentPacman" href="Javascript:void(0);"> Pacman 3D </a></br>
-		<a class="projectLink" id="ContentPlatform" href="Javascript:void(0);"> PlatformGame </a></br>
 		
-		
-		<script type="text/javascript" src="/scripts/js/projets.js"></script>
-		
+			<script type="text/javascript" src="/scripts/js/projets.js"></script>
+		</div>
 	</body>
 
 </html>
