@@ -22,56 +22,49 @@
 			<h3> Projets </h3>
 		<!-- Avoir la liste sur le coté et une mini-présentation de chacun-->
 		<!-- Description plus complete de chacun sur leur pages respectives -->
-			<div class="projets">
-				<div id="Content2048">
-					
-					<div class="projectTitle">
-						<h4> </h4>
+			<div class="projects">
+				<div class="content">
+                    <div class="projectImage"> 
+                        <img src="/content/">
+                    </div>
+                    <div class="projectTitleDesc">
+                        <h4> 2048 </h4>
+						<p>Description</p>
+						<a class="projectLink" id="Link2048" href="Javascript:void(0);"> 2048 </a>
 					</div>
-					<div class="projectImage"> 
-					
-					</div>
-					<div class="projectDescription">
+                </div>
 
+				<div class="content">
+                    <div class="projectImage"> 
+                        <img src="/content/">
+                    </div>
+                    <div class="projectTitleDesc">
+                        <h4> MrWheelAdventure </h4>
+						<p>Description</p>
+						<a class="projectLink" id="LinkMrWheel" href="Javascript:void(0);"> Mr Wheel Adventure </a>
 					</div>
-					
-					<a class="projectLink" id="Link2048" href="Javascript:void(0);"> 2048 </a>
-				</div>
-				<div id="ContentMrWheel">
-					<div class="projectTitle">
-						<h4> </h4>
-					</div>
-					<div class="projectImage"> 
-					
-					</div>
-					<div class="projectDescription">
-
-					</div>
-					<a class="projectLink" id="LinkMrWheel" href="Javascript:void(0);"> Mr Wheel Adventure </a>
 				</div>	
-				<div id="ContentPacman">
-					<div class="projectTitle">
-						<h4> </h4>
+				
+				<div class="content">
+                    <div class="projectImage"> 
+                        <img src="/content/">
+                    </div>
+                    <div class="projectTitleDesc">
+                        <h4> Pacman 3D</h4>
+						<p>Description</p>
+						<a class="projectLink" id="LinkPacman" href="Javascript:void(0);"> Pacman 3D </a>
 					</div>
-					<div class="projectImage"> 
-					
-					</div>
-					<div class="projectDescription">
-
-					</div>
-					<a class="projectLink" id="LinkPacman" href="Javascript:void(0);"> Pacman 3D </a>
 				</div>
-				<div id="ContentPlatform">
-					<div class="projectTitle">
-						<h4> </h4>
+				
+				<div class="content">
+                    <div class="projectImage"> 
+                        <img src="/content/">
+                    </div>
+                    <div class="projectTitleDesc">
+                        <h4> PlatformGame </h4>
+						<p>Description</p>
+						<a class="projectLink" id="LinkPlatformGame" href="Javascript:void(0);"> PlatformGame </a>
 					</div>
-					<div class="projectImage"> 
-					
-					</div>
-					<div class="projectDescription">
-
-					</div>
-					<a class="projectLink" id="LinkPlatformGame" href="Javascript:void(0);"> PlatformGame </a>
 				</div>
 			</div>
 			<!-- -------------------------------------- (menu) -->
@@ -83,21 +76,13 @@
 			<!-- Avec un screen par projet en tant qu'image et une mini description -->
 
 			<!-- Genre ça pour chaque projet -->
-            <!-- -----------|----------- -->
-            <!-- | 	        | Titre     | -->
-            <!-- |  Image   |----------- -->
+            <!-- -----------|-------------- -->
+            <!-- | 	        | Titre        | -->
+            <!-- |  Image   |--------------- -->
             <!-- |          |  Description | -->
-            <!-- -----------|----------- -->
+            <!-- -----------|--------------- -->
 			<!-- Regler le bug sur le chargement des fonctions -->
-			<script type="text/javascript" src="/scripts/js/projets.js">
-				!function(){
-					createClickableLoadPage('#Link2048',"/pages/projets/2048.html","2048");
-					createClickableLoadPage('#LinkMrWheel',"/pages/projets/MrWheelAdventure.html","MrWheelAdventure");
-					createClickableLoadPage('#LinkPacman',"/pages/projets/Pacman3d.html","Pacman3D");
-					createClickableLoadPage('#LinkPlatformGame',"/pages/projets/PlatformGame.html","PlatformGame");
-					alert("bla");
-				}();
-			</script>
+			<script type="text/javascript" src="/scripts/js/projets.js"></script>
 		</div>
 	</body>
 

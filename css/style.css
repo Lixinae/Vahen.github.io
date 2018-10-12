@@ -105,15 +105,36 @@ h3{
  * Projets *
  ***********/
  
- .projets{
+.projects{
 	display:flex;
- }
+	justify-content:space-between;
+	flex-wrap:wrap;
+}
  
- .projets a{
+.projects a{
 	text-decoration: none;
 	 
- }
+}
  
+.content{
+	width:450px;
+	display:flex;
+}
+ 
+.projectTitleDesc{
+	width: 220px;
+	 
+}
+ 
+.projectImage{
+	width: 220px;
+}
+
+.projectImage img{
+	width:200px;
+	
+}
+
  
  
  

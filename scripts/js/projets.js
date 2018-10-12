@@ -1,5 +1,10 @@
 
-
+$(document).ready(function(){
+	createClickableLoadPage('#Link2048',"/pages/projets/2048.html","2048");
+	createClickableLoadPage('#LinkMrWheel',"/pages/projets/MrWheelAdventure.html","MrWheelAdventure");
+	createClickableLoadPage('#LinkPacman',"/pages/projets/Pacman3d.html","Pacman3D");
+	createClickableLoadPage('#LinkPlatformGame',"/pages/projets/PlatformGame.html","PlatformGame");
+});
 /*
 Copie de la fonction dans menu js -> doit etre changé plus tard
 */
