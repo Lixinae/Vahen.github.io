@@ -51,6 +51,7 @@ function createClickableLoadPage(id,url,title){
 		}
 		if(title === "Projets"){
 			location = location;
+			location.reload();	
 		}
     });
 }
