@@ -22,22 +22,81 @@
 			<h3> Projets </h3>
 		<!-- Avoir la liste sur le coté et une mini-présentation de chacun-->
 		<!-- Description plus complete de chacun sur leur pages respectives -->
+			<div class="projets">
+				<div id="Content2048">
+					
+					<div class="projectTitle">
+						<h4> </h4>
+					</div>
+					<div class="projectImage"> 
+					
+					</div>
+					<div class="projectDescription">
 
-			<a class="projectLink" id="Content2048" href="Javascript:void(0);"> 2048 </a></br>
-			
-			<a class="projectLink" id="ContentMrWheel" href="Javascript:void(0);"> Mr Wheel Adventure </a></br>
-			<a class="projectLink" id="ContentPacman" href="Javascript:void(0);"> Pacman 3D </a></br>
-			<a class="projectLink" id="ContentPlatform" href="Javascript:void(0);"> PlatformGame </a></br>
-		
+					</div>
+					
+					<a class="projectLink" id="Link2048" href="Javascript:void(0);"> 2048 </a>
+				</div>
+				<div id="ContentMrWheel">
+					<div class="projectTitle">
+						<h4> </h4>
+					</div>
+					<div class="projectImage"> 
+					
+					</div>
+					<div class="projectDescription">
+
+					</div>
+					<a class="projectLink" id="LinkMrWheel" href="Javascript:void(0);"> Mr Wheel Adventure </a>
+				</div>	
+				<div id="ContentPacman">
+					<div class="projectTitle">
+						<h4> </h4>
+					</div>
+					<div class="projectImage"> 
+					
+					</div>
+					<div class="projectDescription">
+
+					</div>
+					<a class="projectLink" id="LinkPacman" href="Javascript:void(0);"> Pacman 3D </a>
+				</div>
+				<div id="ContentPlatform">
+					<div class="projectTitle">
+						<h4> </h4>
+					</div>
+					<div class="projectImage"> 
+					
+					</div>
+					<div class="projectDescription">
+
+					</div>
+					<a class="projectLink" id="LinkPlatformGame" href="Javascript:void(0);"> PlatformGame </a>
+				</div>
+			</div>
+			<!-- -------------------------------------- (menu) -->
+            <!-- -----------|----------- -->
+            <!-- | Projet 1   |  Projet 2 | -->
+            <!-- -----------|----------- -->
+            <!-- | Projet 3   |  Projet 4 | -->
+            <!-- -----------|----------- -->
+			<!-- Avec un screen par projet en tant qu'image et une mini description -->
+
+			<!-- Genre ça pour chaque projet -->
+            <!-- -----------|----------- -->
+            <!-- | 	        | Titre     | -->
+            <!-- |  Image   |----------- -->
+            <!-- |          |  Description | -->
+            <!-- -----------|----------- -->
 			<!-- Regler le bug sur le chargement des fonctions -->
 			<script type="text/javascript" src="/scripts/js/projets.js">
-				function loadAll(){
-					createClickableLoadPage('#Content2048',"/pages/projets/2048.html","2048");
-					createClickableLoadPage('#ContentMrWheel',"/pages/projets/MrWheelAdventure.html","MrWheelAdventure");
-					createClickableLoadPage('#ContentPacman',"/pages/projets/Pacman3d.html","Pacman3D");
-					createClickableLoadPage('#ContentPlatform',"/pages/projets/PlatformGame.html","PlatformGame");
-				};
-				load();
+				!function(){
+					createClickableLoadPage('#Link2048',"/pages/projets/2048.html","2048");
+					createClickableLoadPage('#LinkMrWheel',"/pages/projets/MrWheelAdventure.html","MrWheelAdventure");
+					createClickableLoadPage('#LinkPacman',"/pages/projets/Pacman3d.html","Pacman3D");
+					createClickableLoadPage('#LinkPlatformGame',"/pages/projets/PlatformGame.html","PlatformGame");
+					alert("bla");
+				}();
 			</script>
 		</div>
 	</body>
