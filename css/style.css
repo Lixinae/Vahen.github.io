@@ -117,25 +117,34 @@ h3{
 }
  
 .content{
-	width:450px;
+	width:310px;
 	display:flex;
+	/*border: 1px solid red;*/
+	margin: 10px auto;
+
 }
  
 .projectTitleDesc{
-	width: 220px;
-	 
+	width: 150px;
+	margin: 0 auto; 
 }
  
 .projectImage{
-	width: 220px;
+	width: 150px;
+	margin: 0 auto;
 }
 
 .projectImage img{
-	width:200px;
+	width:140px;
+	margin: 0 auto;
+	display:block;
 	
 }
 
- 
+h4{
+	text-align:center;
+
+}	
  
  
  

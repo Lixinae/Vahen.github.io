@@ -16,9 +16,7 @@ Affiche le menu
 function showMenu(){
 
 $('#menu').html('');
-$('#menu').append('<ul>');
-
-$('#menu').append('<li class="menuElement"><a id="MenuIndex" href="Javascript:void(0);"> Accueil </a></li>');
+$('#menu').append('<ul><li class="menuElement"><a id="MenuIndex" href="Javascript:void(0);"> Accueil </a></li>');
 
 $('#menu').append('<li class="menuElement"><div class="dropdown"> <a id="MenuProjet" href="Javascript:void(0);"> Projets </a></div></li>');
 
@@ -30,9 +28,8 @@ $('.dropdown-content').append('<a id="MenuPlatform" href="Javascript:void(0);"> 
 $('.dropdown').append('</div>');
 
 $('#menu').append('<li class="menuElement"><a id="MenuContact" href="Javascript:void(0);"> Contact </a></li>');
-$('#menu').append('<li class="menuElement"><a id="MenuWhoAmI" href="Javascript:void(0);"> Qui suis je ? </a></li>');	
+$('#menu').append('<li class="menuElement"><a id="MenuWhoAmI" href="Javascript:void(0);"> Qui suis je ? </a></li></ul>');	
 
-$('#menu').append('</ul>');
 }
 
 /*
