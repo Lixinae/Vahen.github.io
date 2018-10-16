@@ -15,20 +15,20 @@ Affiche le menu
 */
 function showMenu(){
 
-$('#menu').html('');
-$('#menu').append('<ul><li class="menuElement"><a id="MenuIndex" href="Javascript:void(0);"> Accueil </a></li>');
+	$('#menu').html('');
+	$('#menu').append('<li class="menuElement"><a id="MenuIndex" href="Javascript:void(0);"> Accueil </a></li>');
 
-$('#menu').append('<li class="menuElement"><div class="dropdown"> <a id="MenuProjet" href="Javascript:void(0);"> Projets </a></div></li>');
+	$('#menu').append('<li class="menuElement"><div class="dropdown"> <a id="MenuProjet" href="Javascript:void(0);"> Projets </a></div></li>');
 
-$('.dropdown').append('<div class="dropdown-content">');
-$('.dropdown-content').append('<a id="Menu2048" href="Javascript:void(0);"> 2048 </a></br>');
-$('.dropdown-content').append('<a id="MenuMrWheel" href="Javascript:void(0);"> Mr Wheel Adventure </a></br>');
-$('.dropdown-content').append('<a id="MenuPacman" href="Javascript:void(0);"> Pacman 3D </a></br>');
-$('.dropdown-content').append('<a id="MenuPlatform" href="Javascript:void(0);"> PlatformGame </a></br>');
-$('.dropdown').append('</div>');
+	$('.dropdown').append('<div class="dropdown-content">');
+	$('.dropdown-content').append('<a id="Menu2048" href="Javascript:void(0);"> 2048 </a></br>');
+	$('.dropdown-content').append('<a id="MenuMrWheel" href="Javascript:void(0);"> Mr Wheel Adventure </a></br>');
+	$('.dropdown-content').append('<a id="MenuPacman" href="Javascript:void(0);"> Pacman 3D </a></br>');
+	$('.dropdown-content').append('<a id="MenuPlatform" href="Javascript:void(0);"> PlatformGame </a></br>');
+	$('.dropdown').append('</div>');
 
-$('#menu').append('<li class="menuElement"><a id="MenuContact" href="Javascript:void(0);"> Contact </a></li>');
-$('#menu').append('<li class="menuElement"><a id="MenuWhoAmI" href="Javascript:void(0);"> Qui suis je ? </a></li></ul>');	
+	$('#menu').append('<li class="menuElement"><a id="MenuContact" href="Javascript:void(0);"> Contact </a></li>');
+	$('#menu').append('<li class="menuElement"><a id="MenuWhoAmI" href="Javascript:void(0);"> Qui suis je ? </a></li>');	
 
 }
 
