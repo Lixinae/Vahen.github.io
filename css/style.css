@@ -5,6 +5,7 @@ html, body, * {
 
 body{
 	background-color:#6A6562;
+	font-family:"calibri", sans-serif;
 	/* background-image:linear-gradient(to right,#333136,#825423); */
 	/*background-image:radial-gradient(red, yellow, green);*/
 }
