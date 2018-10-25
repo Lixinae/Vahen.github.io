@@ -4,8 +4,9 @@ html, body, * {
 }
 
 body{
-	background-color:#6A6562;
+	background-color:#242730;
 	font-family:"calibri", sans-serif;
+	color:#2D942D;
 	/* background-image:linear-gradient(to right,#333136,#825423); */
 	/*background-image:radial-gradient(red, yellow, green);*/
 }
@@ -42,7 +43,7 @@ body{
  * Menu *
  ********/
 #menu{
-	background:lightGray;
+	background:#3D3C41;
 	text-align: center;
 	height: 34px;
 	/* background-image:linear-gradient(to right,#333136,#825423); */
@@ -51,12 +52,14 @@ body{
 .menuElement{
 	display:inline-block;
 	color:black;
+	color:#2D942D;
 	line-height: 34px;
 }
 
 .menuElement a{
 	text-decoration: none;
 	color:black;
+	color:#2D942D;
 	padding: 8px 16px;
 	white-space: nowrap;
 }
@@ -109,9 +112,10 @@ h3{
 }
 
 .bodyContent{
-	width:960px;
+	width:1160px;
 	margin: 0 auto;
-	background:#888880;
+	background-color:#242730;
+	padding:10px 0;
 }
  
  /**********
@@ -129,9 +133,9 @@ h3{
 }
  
 .content{
-	width:310px;
+	width:350px;
 	display:flex;
-	/*border: 1px solid red;*/
+	border: 1px solid red;
 	margin: 10px auto;
 
 }
@@ -175,7 +179,7 @@ h4{
 
 .mainImageProject img{
 	height:200px;
-	width:600px;
+	width:650px;
 	margin: 0 auto;
 	display:block;
 	
@@ -212,11 +216,12 @@ h4{
 	justify-content:space-between;
 	flex-wrap:wrap;
 	margin: 0 auto;
+
 }
 
 .whoAmIContent{
 	border: 1px solid red;
-	width:440px;
+	width:475px;
 	margin: 10px auto;
 	padding: 10px 10px;
 }
