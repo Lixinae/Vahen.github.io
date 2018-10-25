@@ -3,6 +3,24 @@ html, body, * {
     padding: 0;
 }
 
+body{
+	background-color:#6A6562;
+	/* background-image:linear-gradient(to right,#333136,#825423); */
+	/*background-image:radial-gradient(red, yellow, green);*/
+}
+
+/* RESPONSIVE ARROWS */
+/*[class^=arr-]*/
+.listArrow{
+  border:       solid currentColor;
+  border-width: 0 .2em .2em 0;
+  display:      inline-block;
+  padding:      .20em;
+  transform:rotate(-45deg); 
+  -webkit-transform:rotate(-45deg);
+}
+
+
 /********** 
  * Banner *
  **********/
@@ -26,6 +44,7 @@ html, body, * {
 	background:lightGray;
 	text-align: center;
 	height: 34px;
+	/* background-image:linear-gradient(to right,#333136,#825423); */
 }
 
 .menuElement{
@@ -91,6 +110,7 @@ h3{
 .bodyContent{
 	width:960px;
 	margin: 0 auto;
+	background:#888880;
 }
  
  /**********
@@ -181,4 +201,25 @@ h4{
 .annexNotes{
 
 }	
+/************
+ * Who am I *
+ ************/
+ 
+.whoAmI{
+    display: flex;
+	/*flex-direction: column;	*/
+	justify-content:space-between;
+	flex-wrap:wrap;
+	margin: 0 auto;
+}
 
+.whoAmIContent{
+	border: 1px solid red;
+	width:440px;
+	margin: 10px auto;
+	padding: 10px 10px;
+}
+
+.whoAmIContent li{
+	list-style-type: none;
+}	
