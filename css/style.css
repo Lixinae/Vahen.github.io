@@ -6,7 +6,7 @@ html, body, * {
 body{
 	background-color:#242730;
 	font-family:"calibri", sans-serif;
-	color:#2D942D;
+	color:#30ad30;
 	/* background-image:linear-gradient(to right,#333136,#825423); */
 	/*background-image:radial-gradient(red, yellow, green);*/
 }
@@ -52,14 +52,14 @@ body{
 .menuElement{
 	display:inline-block;
 	color:black;
-	color:#2D942D;
+	color:#30ad30;
 	line-height: 34px;
 }
 
 .menuElement a{
 	text-decoration: none;
 	color:black;
-	color:#2D942D;
+	color:#30ad30;
 	padding: 8px 16px;
 	white-space: nowrap;
 }
