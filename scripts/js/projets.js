@@ -22,6 +22,8 @@ function projetMiniature(titre, description="", langages="", imageLocation=""){
 	var output = "<div class=\"content\">"
 				+ "<div class=\"projectImage\">"
 				+ "<img src=\"/content/"+imageLocation+"\">"
+				+ "</div>"
+				+ "<div class=\"projectTitleDesc\">"
 				+ "<h4>"+ titre +"</h4>"	
 				+ "<p>" + description + "</p>"
 				+ "<p>" + langages + "</p>"
