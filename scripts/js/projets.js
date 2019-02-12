@@ -8,12 +8,13 @@ $(document).ready(function(){
 	*/
 	$('.projects').html("");
 	// todo : Ajouter le reste des arguments, description, langages, fichier image
-	projetMiniature("MrWheelAdventure");
-	projetMiniature("Pacman 3D");
-	projetMiniature("PlatformGame");
-	projetMiniature("Raytracer")
-	projetMiniature("Webcrawler");
-	projetMiniature("AnimationPython");
+	projetMiniature("2048","","Java");
+	projetMiniature("MrWheelAdventure","","Unity, C#");
+	projetMiniature("Pacman 3D","","C++, OpenGL3+");
+	projetMiniature("PlatformGame","","Unity, C#");
+	projetMiniature("Raytracer","","C++, SDL1.2");
+	projetMiniature("Webcrawler","","Python");
+	projetMiniature("AnimationPython","","Python");
 });
 
 function projetMiniature(titre, description="", langages="", imageLocation=""){
