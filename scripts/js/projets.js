@@ -6,6 +6,14 @@ $(document).ready(function(){
 	createClickableLoadPage('#LinkPacman',"/pages/projets/Pacman3d.html","Pacman3D");
 	createClickableLoadPage('#LinkPlatformGame',"/pages/projets/PlatformGame.html","PlatformGame");
 	*/
+	$('.projects').html("");
+	// todo : Ajouter le reste des arguments, description, langages, fichier image
+	projetMiniature("MrWheelAdventure");
+	projetMiniature("Pacman 3D");
+	projetMiniature("PlatformGame");
+	projetMiniature("Raytracer")
+	projetMiniature("Webcrawler");
+	projetMiniature("AnimationPython");
 });
 
 function projetMiniature(titre, description="", langages="", imageLocation=""){
