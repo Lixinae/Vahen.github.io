@@ -8,7 +8,7 @@ $(document).ready(function(){
 	*/
 });
 
-projetMiniature(titre, description="", langages="", imageLocation=""){
+function projetMiniature(titre, description="", langages="", imageLocation=""){
 	
 	$('.projects').append("<div class=\"content\">");
 	$('.projects').append("<div class=\"projectImage\">");
