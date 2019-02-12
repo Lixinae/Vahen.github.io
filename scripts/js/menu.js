@@ -6,6 +6,9 @@ $(document).ready(function(){
 	createClickableLoadPage('#MenuMrWheel',"/pages/projets/MrWheelAdventure.html","MrWheelAdventure");
 	createClickableLoadPage('#MenuPacman',"/pages/projets/Pacman3d.html","Pacman3D");
 	createClickableLoadPage('#MenuPlatform',"/pages/projets/PlatformGame.html","PlatformGame");
+	createClickableLoadPage('#MenuRaytracer',"/pages/projets/Raytracer.html","Raytracer");
+	createClickableLoadPage('#MenuWebCrawler',"/pages/projets/WebCrawler.html","WebCrawler");
+	createClickableLoadPage('#MenuAnimationPython',"/pages/projets/AnimationPython.html","AnimationPython");
 	createClickableLoadPage('#MenuContact',"/pages/Contact.html","Contact");
 	createClickableLoadPage('#MenuWhoAmI',"/pages/WhoAmI.html","WhoAmI");
 });
@@ -25,6 +28,10 @@ function showMenu(){
 	$('.dropdown-content').append('<a id="MenuMrWheel" href="Javascript:void(0);"> Mr Wheel Adventure </a></br>');
 	$('.dropdown-content').append('<a id="MenuPacman" href="Javascript:void(0);"> Pacman 3D </a></br>');
 	$('.dropdown-content').append('<a id="MenuPlatform" href="Javascript:void(0);"> PlatformGame </a></br>');
+	$('.dropdown-content').append('<a id="MenuRaytracer" href="Javascript:void(0);"> Raytracer </a></br>');
+	$('.dropdown-content').append('<a id="MenuWebCrawler" href="Javascript:void(0);"> WebCrawler </a></br>');
+	$('.dropdown-content').append('<a id="MenuAnimationPython" href="Javascript:void(0);"> AnimationPython </a></br>');
+	// Todo : Ajouter les autres projets à la liste 
 	$('.dropdown').append('</div>');
 
 	$('#menu').append('<li class="menuElement"><a id="MenuContact" href="Javascript:void(0);"> Contact </a></li>');
