@@ -2,6 +2,7 @@ $(document).ready(function(){
 	showMenu();
 	createClickableLoadPage('#MenuIndex',"/index.html","Accueil");
 	createClickableLoadPage('#MenuProjet',"/pages/Projets.html","Projets");
+	
 	createClickableLoadPage('#Menu2048',"/pages/projets/2048.html","2048");
 	createClickableLoadPage('#MenuMrWheel',"/pages/projets/MrWheelAdventure.html","MrWheelAdventure");
 	createClickableLoadPage('#MenuPacman',"/pages/projets/Pacman3d.html","Pacman3D");
@@ -9,6 +10,7 @@ $(document).ready(function(){
 	createClickableLoadPage('#MenuRaytracer',"/pages/projets/Raytracer.html","Raytracer");
 	createClickableLoadPage('#MenuWebCrawler',"/pages/projets/WebCrawler.html","WebCrawler");
 	createClickableLoadPage('#MenuAnimationPython',"/pages/projets/AnimationPython.html","AnimationPython");
+	
 	createClickableLoadPage('#MenuContact',"/pages/Contact.html","Contact");
 	createClickableLoadPage('#MenuWhoAmI',"/pages/WhoAmI.html","WhoAmI");
 });
