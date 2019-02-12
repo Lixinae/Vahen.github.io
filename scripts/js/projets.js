@@ -18,6 +18,18 @@ $(document).ready(function(){
 
 function projetMiniature(titre, description="", langages="", imageLocation=""){
 	
+	var output = "<div class=\"content\">"
+				+ "<div class=\"projectImage\">"
+				+ "<img src=\"/content/"+imageLocation+"\">"
+				+ "<h4>"+ titre +"</h4>"	
+				+ "<p>" + description + "</p>"
+				+ "<p>" + langages + "</p>"
+				+ "<a class=\"projectLink\" href=\"Javascript:void(0);\"> Details </a>"
+				+ "</div>"
+				+ "</div>" ;
+	
+	$('.projects').append(output);
+	/*
 	$('.projects').append("<div class=\"content\">");
 	$('.projects').append("<div class=\"projectImage\">");
 	$('.projects').append("<img src=\"/content/"+imageLocation+"\">");
@@ -28,7 +40,7 @@ function projetMiniature(titre, description="", langages="", imageLocation=""){
 	$('.projects').append("<p>" + langages + "</p>" );
 	$('.projects').append("<a class=\"projectLink\" href=\"Javascript:void(0);\"> Details </a>" );
 	$('.projects').append("</div>");
-	$('.projects').append("</div>");
+	$('.projects').append("</div>");*/
 }
 
 			
