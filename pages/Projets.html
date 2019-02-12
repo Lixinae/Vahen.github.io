@@ -22,6 +22,46 @@
 			<h3> Projets </h3>
 		<!-- Avoir la liste sur le coté et une mini-présentation de chacun-->
 		<!-- Description plus complete de chacun sur leur pages respectives -->
+		
+				<!-- Trouver une meilleur methode pour rajouter des projets 
+					Methode actuel = chiante et exhaustive
+					Car Ajout ici et dans le fichier menu.js et chacune des pages des projets
+					-> Plein de copié / coller et d'info redeclarer = Pas bien
+					Et le menu dropdown deviendra trop long avec plus de projets donc besoin d'une meilleure idée
+					
+					
+					Une fonction javascript qui ecrit :
+					<div class="content">
+						<div class="projectImage"> 
+							<img src="/content/<MonsuperFichier>">
+						</div>
+						<div class="projectTitleDesc">
+							<h4> <Nom du projet> </h4>
+							<p> <Description> </p>
+							<p> <Langages> </p>
+							<a class="projectLink" id="Link<Nom projet>" href="Javascript:void(0);"> Détails </a>
+						</div>
+					</div>
+					
+					ProjetMiniature(2048,<Description>,<Langages>,<Emplacement du fichier>);
+					
+					ProjetMiniature(MrWheelAdventure,<Description>,<Langages>,<Emplacement du fichier>);
+					
+					ProjetMiniature(Pacman 3D,<Description>,<Langages>,<Emplacement du fichier>);
+					
+					ProjetMiniature(PlatformGame,<Description>,<Langages>,<Emplacement du fichier>);
+					
+					ProjetMiniature(Raytracer,<Description>,<Langages>,<Emplacement du fichier>);
+					
+					ProjetMiniature(Webcrawler,<Description>,<Langages>,<Emplacement du fichier>);
+					
+					ProjetMiniature(AnimationPython,<Description>,<Langages>,<Emplacement du fichier>);
+					...
+					Etc
+					
+					
+				-->
+		
 			<div class="projects">
 				<div class="content">
                     <div class="projectImage"> 
@@ -29,9 +69,8 @@
                     </div>
                     <div class="projectTitleDesc">
                         <h4> 2048 </h4>
-						<p> Le jeu du 2048 </p>
 						<p> Java </p>
-						<a class="projectLink" id="Link2048" href="Javascript:void(0);"> 2048 </a>
+						<a class="projectLink" id="Link2048" href="Javascript:void(0);"> Détails </a>
 					</div>
                 </div>
 
@@ -43,7 +82,7 @@
                         <h4> MrWheelAdventure </h4>
 						<p> Description </p>
 						<p> Unity, C# </p>
-						<a class="projectLink" id="LinkMrWheel" href="Javascript:void(0);"> Mr Wheel Adventure </a>
+						<a class="projectLink" id="LinkMrWheel" href="Javascript:void(0);"> Détails </a>
 					</div>
 				</div>	
 				
@@ -55,7 +94,7 @@
                         <h4> Pacman 3D </h4>
 						<p> Une reprise de pacman, avec un moteur 3D </p>
 						<p> C++, OpenGL3+ </p>
-						<a class="projectLink" id="LinkPacman" href="Javascript:void(0);"> Pacman 3D </a>
+						<a class="projectLink" id="LinkPacman" href="Javascript:void(0);"> Détails </a>
 					</div>
 				</div>
 				
@@ -67,9 +106,48 @@
                         <h4> PlatformGame </h4>
 						<p> Un petit jeu de plateforme très simple pour tester les différents concepts d'unity </p>
 						<p> Unity, C# </p>
-						<a class="projectLink" id="LinkPlatformGame" href="Javascript:void(0);"> PlatformGame </a>
+						<a class="projectLink" id="LinkPlatformGame" href="Javascript:void(0);"> Détails </a>
 					</div>
 				</div>
+				
+				<!-- Todo Ajouter les autres projets dans la page -->
+
+				<div class="content">
+                    <div class="projectImage"> 
+                        <img src="/content/">
+                    </div>
+                    <div class="projectTitleDesc">
+                        <h4> Raytracer </h4>
+						<p> Un raytracer fait avec un moteur créé intégralement à la main </p>
+						<p> C++, SDL1.2 </p>
+						<a class="projectLink" id="LinkRaytracer" href="Javascript:void(0);"> Détails </a>
+					</div>
+				</div>
+				
+				<div class="content">
+                    <div class="projectImage"> 
+                        <img src="/content/">
+                    </div>
+                    <div class="projectTitleDesc">
+                        <h4> Webcrawler </h4>
+						<p> </p>
+						<p> Python </p>
+						<a class="projectLink" id="LinkWebCrawler" href="Javascript:void(0);"> Détails </a>
+					</div>
+				</div>
+				
+				<div class="content">
+                    <div class="projectImage"> 
+                        <img src="/content/">
+                    </div>
+                    <div class="projectTitleDesc">
+                        <h4> AnimationPython </h4>
+						<p> Une animation en utilisant un moteur physique simple d'un drapeau </p>
+						<p> Python </p>
+						<a class="projectLink" id="LinkAnimationPython" href="Javascript:void(0);"> Détails </a>
+					</div>
+				</div>
+				
 			</div>
 			<!-- -------------------------------------- (menu) -->
             <!-- -----------|----------- -->
