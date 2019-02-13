@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>WebGames</title>
+        <link rel="stylesheet" href="../css/style.css"/> <!-- Todo -> remove ../ -->
+		<script type="text/javascript" src="../scripts/libs/jquery-3.3.1.min.js"></script> <!-- Todo -> remove ../ -->
+        <!-- Ajout de la bibliotheque angular js pour l'animation -->
+ 
+    </head>
+	<body>
+		<script type="text/javascript"> 
+			$(document).ready(function(){
+			  $("#headerContent").load("../pages/Header.html");  <!-- Todo -> remove ../ -->
+			});
+		</script>
+		<div id="headerContent"> </div>
+		
+		<!-- <div id="banner">  -->
+			<!-- <img id="bannerImg" src="/content/banner.png"> </img> -->
+		<!-- </div> -->
+		<!-- <script type="text/javascript" src="/scripts/js/menu.js"></script> -->
+		<!-- <div id="menu"></div> -->
+		
+		<div class="bodyContent">
+			<h3>WebGames</h3>
+			<script type="text/javascript" src="../scripts/js/game.js"></script>
+			<canvas id="gameCanvas" width="800" height="600"> </canvas>
+			<!-- Todo lmettre dans le fichier après -->
+			<script type="text/javascript">
+				var largeurWindow=800;
+				var hauteurWindow = 600;
+				
+				var deuxTierLarg=(2*largeurWindow/3);
+				var unTierLarg=(1*largeurWindow/3);
+				
+				var canvas = $("#gameCanvas")[0]; <!-- $("#gameCanvas") -> renvoie une array -->
+				var ctx = canvas.getContext("2d"); <!-- Context -->
+				
+		
+				class RectangleAnim{
+
+					
+					constructor(x,y,largeur,hauteur,color,mouvementX,mouvementY){
+					
+						// Champs membre de l'objet
+						this.x=10;
+						this.y=10;
+						
+						this.largeur=25;
+						this.hauteur=25;
+						this.mouvementX=1;
+						this.mouvementY=1;
+						
+						this.speedModifierX = 1;
+						this.speedModifierY = 1;
+												
+						color:"rgb(255, 0, 100)";
+					
+						this.x=x;
+						this.y=y;
+						this.largeur=largeur;
+						this.hauteur=hauteur;
+												
+						this.mouvementX=mouvementX;
+						this.mouvementY=mouvementY;
+						
+						this.color=color;
+						
+						this.upperLeft = {x:this.x,y:this.y}
+						this.lowerRight = {x:this.x+this.largeur,y:this.y+this.hauteur};
+					}
+					// Getter
+					getmouvementX(){
+						return this.mouvementX;
+					}
+					
+					getmouvementY(){
+						return this.mouvementY;
+					}
+					
+					// Inversion du signe du deplacement
+					invertMouvementX(){
+						this.mouvementX = -this.mouvementX;
+					}
+					invertMouvementY(){
+						this.mouvementY = -this.mouvementY;
+					}
+					
+					// Methodes de l'objet
+					updatePos(){
+						// Bord droit
+						if(this.x >= largeurWindow-this.largeur){
+							this.x = largeurWindow-this.largeur;
+							this.invertMouvementX();
+						}
+						// Bord gauche
+						if(this.x <= 0){
+							this.x = 0.1;
+							this.invertMouvementX();
+						}
+						// Haut
+						if(this.y >= hauteurWindow-this.hauteur){
+							this.y = hauteurWindow-this.hauteur;
+							this.invertMouvementY();
+						}
+						// Bas
+						if(this.y <= 0){
+							this.y = 0.1;
+							this.invertMouvementY();
+						}
+						
+						this.updateSpeedModifier();
+						
+						this.x += (this.mouvementX)*this.speedModifierX;
+						this.y += (this.mouvementY)*this.speedModifierY;
+						
+						this.upperLeft = {x:this.x,y:this.y}
+						this.lowerRight = {x:this.x+this.largeur,y:this.y+this.hauteur};
+						//console.log(this.hitboxX);
+					}
+					
+					// Surement un moyen d'ameliorer ça 
+					draw(){
+						ctx.fillStyle = this.color;
+						ctx.fillRect(this.x, this.y, this.largeur, this.hauteur);
+					}
+					
+					updateSpeedModifier(){
+						//this.speedModifierX+=0.01;
+						//this.speedModifierY+=0.01;
+					}
+					
+					collideWithAnother(rectangle){		
+						return (this.collideOnRight(rectangle))
+							&& (this.collideOnLeft(rectangle))
+							&& (this.collideOnBottom(rectangle)) 
+							&& (this.collideOnTop(rectangle));
+					}
+					
+					collideOnTop(rectangle){
+						return this.lowerRight.y > rectangle.upperLeft.y;
+					}
+					
+					collideOnBottom(rectangle){
+						return this.upperLeft.y < rectangle.lowerRight.y;
+					}
+					
+					collideOnLeft(rectangle){
+						return this.lowerRight.x > rectangle.upperLeft.x;
+					}
+					
+					collideOnRight(rectangle){
+						return this.upperLeft.x < rectangle.lowerRight.x;
+					}
+					
+					isLeftOf(rectangle){
+						return this.lowerRight.x-0.1 <= rectangle.upperLeft.x;
+					}
+					
+					isRightOf(rectangle){
+						return this.upperLeft.x-0.1 >= rectangle.lowerRight.x;
+					}
+					
+					isUnderOf(rectangle){
+						return this.upperLeft.y <= rectangle.lowerRight.y;
+					}
+					
+					isOverOf(rectangle){
+						return this.lowerRight.y >= rectangle.upperLeft.y;
+					}
+				}
+				
+				var rect1 = new RectangleAnim(0,0, 50,50,"rgb(255, 255, 100)",2,3);
+				var rect2 = new RectangleAnim(100,100, 10,10,"rgb(0, 255, 100)",5,5);
+				var rect3 = new RectangleAnim(10,200, 15,35,"rgb(255, 100, 0)",15,10);
+				var rectCentre = new RectangleAnim(300,200, 200,300,"rgb(255, 100, 0)",15,10);
+					
+				var rects = [];
+				rects.push(rect1);
+				//rects.push(rect2);
+				//rects.push(rect3);
+				//console.log(rects.length);
+				
+				var step = function(){
+					
+					ctx.clearRect(0,0,largeurWindow,hauteurWindow);
+					
+					rectCentre.draw();
+					
+					rects.forEach(function(rect,index){
+						//rect.updateSpeed();
+						//console.log(rect.collideWithAnother(rectCentre));
+						let leftOf = rect.isLeftOf(rectCentre);
+						let rightOf = rect.isRightOf(rectCentre);
+						let underOf = rect.isUnderOf(rectCentre);
+						let overOf = rect.isOverOf(rectCentre);
+						
+						if(rect.collideWithAnother(rectCentre)){
+							// Bug ici
+							console.log(leftOf);
+							console.log(rightOf);
+							console.log(underOf);
+							console.log(overOf);
+							if(leftOf || rightOf){
+								console.log("Gauche / droite");
+								rect.invertMouvementX();
+							}
+							else if(underOf || overOf){
+								console.log("Haut / bas");
+								rect.invertMouvementY();
+							}
+						}
+						/*if(rect.collideOnTop(rectCentre) &&  )){
+							rect.invertMouvementY();
+						}*/
+						
+						rect.updatePos();
+
+						
+						rect.draw();
+					});
+					window.requestAnimationFrame(step);
+				}
+				step();
+				
+			</script>
+			
+			<div class="webGames">
+
+			</div>
+            <p> /!\ Site en cours de construction /!\ </p>
+		</div>
+	</body>
+
+</html>

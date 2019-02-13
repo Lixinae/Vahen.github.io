@@ -229,3 +229,11 @@ h4{
 .whoAmIContent li{
 	list-style-type: none;
 }	
+
+/*************
+ * Web Games *
+ *************/
+
+#gameCanvas{
+	border: 1px solid black;
+}
