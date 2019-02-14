@@ -34,8 +34,7 @@
 				var deuxTierLarg=(2*largeurWindow/3);
 				var unTierLarg=(1*largeurWindow/3);
 				
-				var canvas = $("#gameCanvas")[0]; <!-- $("#gameCanvas") -> renvoie une array -->
-				var ctx = canvas.getContext("2d"); <!-- Context -->
+
 				
 		
 				class RectangleAnim{
@@ -115,8 +114,10 @@
 						this.x += (this.mouvementX)*this.speedModifierX;
 						this.y += (this.mouvementY)*this.speedModifierY;
 						
-						this.upperLeft = {x:this.x,y:this.y}
-						this.lowerRight = {x:this.x+this.largeur,y:this.y+this.hauteur};
+						this.upperLeft = {x:this.x,
+										  y:this.y}
+						this.lowerRight = {x:this.x+this.largeur,
+										   y:this.y+this.hauteur};
 						//console.log(this.hitboxX);
 					}
 					
@@ -138,6 +139,8 @@
 							&& (this.collideOnTop(rectangle));
 					}
 					
+					/////////////
+					
 					collideOnTop(rectangle){
 						return this.lowerRight.y > rectangle.upperLeft.y;
 					}
@@ -154,12 +157,14 @@
 						return this.upperLeft.x < rectangle.lowerRight.x;
 					}
 					
+					//////////////// 
+					
 					isLeftOf(rectangle){
 						return this.lowerRight.x-0.1 <= rectangle.upperLeft.x;
 					}
 					
 					isRightOf(rectangle){
-						return this.upperLeft.x-0.1 >= rectangle.lowerRight.x;
+						return this.upperLeft.x+2 >= rectangle.lowerRight.x;
 					}
 					
 					isUnderOf(rectangle){
@@ -173,14 +178,16 @@
 				
 				var rect1 = new RectangleAnim(0,0, 50,50,"rgb(255, 255, 100)",2,3);
 				var rect2 = new RectangleAnim(100,100, 10,10,"rgb(0, 255, 100)",5,5);
-				var rect3 = new RectangleAnim(10,200, 15,35,"rgb(255, 100, 0)",15,10);
+				var rect3 = new RectangleAnim(10,200, 15,35,"rgb(255, 100, 200)",1,1);
 				var rectCentre = new RectangleAnim(300,200, 200,300,"rgb(255, 100, 0)",15,10);
 					
 				var rects = [];
 				rects.push(rect1);
-				//rects.push(rect2);
-				//rects.push(rect3);
+				rects.push(rect2);
+				rects.push(rect3);
 				//console.log(rects.length);
+				var canvas = $("#gameCanvas")[0]; <!-- $("#gameCanvas") -> renvoie une array -->
+				var ctx = canvas.getContext("2d"); <!-- Context -->
 				
 				var step = function(){
 					
@@ -189,19 +196,21 @@
 					rectCentre.draw();
 					
 					rects.forEach(function(rect,index){
+						rect.updatePos();
 						//rect.updateSpeed();
 						//console.log(rect.collideWithAnother(rectCentre));
 						let leftOf = rect.isLeftOf(rectCentre);
 						let rightOf = rect.isRightOf(rectCentre);
 						let underOf = rect.isUnderOf(rectCentre);
 						let overOf = rect.isOverOf(rectCentre);
-						
+						//console.log("Left Of first :" + leftOf + " ("+rect.lowerRight.x + ", " + rect.lowerRight.y +")"+ "("+rectCentre.upperLeft.x + ", " + rectCentre.upperLeft.y +")");
+						//console.log("Right Of first :" + rightOf + " ("+rect.upperLeft.x + ", " + rect.upperLeft.y +")"+ "("+rectCentre.lowerRight.x + ", " + rectCentre.upperLeft.y +")");
 						if(rect.collideWithAnother(rectCentre)){
 							// Bug ici
-							console.log(leftOf);
-							console.log(rightOf);
-							console.log(underOf);
-							console.log(overOf);
+							//console.log("Left Of " + leftOf + " ("+rect.lowerRight.x + ", " + rect.lowerRight.y +")"+ "("+rectCentre.upperLeft.x + ", " + rectCentre.upperLeft.y +")");
+							//console.log("Right Of" + rightOf + " ("+rect.upperLeft.x + ", " + rect.upperLeft.y +")"+ "("+rectCentre.lowerRight.x + ", " + rectCentre.upperLeft.y +")");
+							//console.log(underOf);
+							//console.log(overOf);
 							if(leftOf || rightOf){
 								console.log("Gauche / droite");
 								rect.invertMouvementX();
@@ -215,10 +224,10 @@
 							rect.invertMouvementY();
 						}*/
 						
-						rect.updatePos();
+						
 
 						
-						rect.draw();
+						rect.draw(ctx);
 					});
 					window.requestAnimationFrame(step);
 				}
