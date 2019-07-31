@@ -5,6 +5,7 @@
         <title>Qui suis-je ?</title>
 		<link rel="stylesheet" href="/css/style.css"/>
 		<script type="text/javascript" src="/scripts/libs/jquery-3.3.1.min.js"></script> 
+		
     </head>
 	<body>
 		<!-- Header content -->
@@ -19,7 +20,44 @@
 		
 		<div class="bodyContent">
 			<h3>Qui suis-je ?</h3>
-			<div class="whoAmI"> 
+			<script type="text/javascript">
+				$(function(){
+					var dark = $('.pdfShowDark');
+					var light = $('.pdfShowLight');
+	  				light.hide();
+					dark.show();
+				});
+
+			
+				function DisplayDarkMode(){
+					var dark = $('.pdfShowDark');
+					var light = $('.pdfShowLight');
+					light.hide();
+					dark.show();
+				}
+				
+				function DisplayLightMode(){
+					var dark = $('.pdfShowDark');
+					var light = $('.pdfShowLight');
+					dark.hide();
+					light.show();
+				}
+			</script>
+			
+			<div class="buttonParent">
+				<button class="btn darkMod" onClick="DisplayDarkMode()">Dark mode</button>
+			</div>
+			<div class="buttonParent">
+				<button class="btn lightMod" onClick="DisplayLightMode()">Light mode</button>
+			</div>
+			<div class="pdfShowDark">
+				<embed src="/content/pdfFiles/CV_PicoChristopher_Dark.pdf" width="1024" height="768" alt="CV_in_pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+			</div>
+			<div class="pdfShowLight">
+				<embed src="/content/pdfFiles/CV_PicoChristopher_Light.pdf" width="1024" height="768" alt="CV_in_pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+			</div>
+			
+			<!-- <div class="whoAmI"> 
 				
 				<div class="whoAmIContent">
 					<h4> Description </h4>
@@ -31,10 +69,10 @@
 					<p><div class="listArrow"></div> 2017/2018 - Master 2 Informatique - Sciences de l'image - UPEM </p>
 					<p><div class="listArrow"></div> 2016/2017 - Master 1 Informatique - UPEM</p> 
 				</div>
-<!-- todo Améliorer ce cadre  -->
+<!-- todo Améliorer ce cadre  ->
 				<div class="whoAmIContent"> 
 					<h4> Emplois </h4>
-					<p><div class="listArrow"></div> 10/12/2018 - Actuel : Consultant développeur C++, entreprise SII </p>
+					<p><div class="listArrow"></div> 10/12/2018 - 01/06/2019 : Consultant développeur C++, entreprise SII </p>
 					<p><div class="listArrow"></div> 09/04/2018 - 31/09/2018 : Stage de fin d'étude -> Developpement d'une application en réalité augmenté sur le casque Hololens, école d'ingénieur ESIEE </p> 
 					<p><div class="listArrow"></div> 01/02/2017 - 01/06/2017 : Stage -> Portage d'une application excel en Java, entreprise Noxdia </p> 
 				</div>
@@ -47,6 +85,8 @@
 						<li><div class="listArrow"></div> C#(dans le cadre de unity3D) </li>
 						<li><div class="listArrow"></div> Java </li>
 						<li><div class="listArrow"></div> Javascript </li>
+						<li><div class="listArrow"></div> Python </li>
+						
 					</ul>
 				</div>
 				
@@ -71,6 +111,7 @@
 				
 				
 			</div>
+			-->
 		</div>
 	</body>
 

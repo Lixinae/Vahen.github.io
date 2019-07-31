@@ -23,6 +23,15 @@ body{
 }
 
 
+
+.pdfShowDark{
+	text-align:center;
+}
+
+.pdfShowLight{
+	text-align:center;
+}
+
 /********** 
  * Banner *
  **********/
@@ -229,6 +238,44 @@ h4{
 .whoAmIContent li{
 	list-style-type: none;
 }	
+
+
+/*********************
+ * Button change mod *
+ *********************/
+
+.buttonParent {
+    display: flex;
+	/*flex-direction: column;	*/
+	justify-content:space-around;
+	flex-wrap:wrap;
+	margin: 0 auto;
+    align-content: space-around;
+}
+
+.btn{
+  border: none;
+  background-color: inherit;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  align-self: center;
+	
+}
+.btn.darkMod{
+	color: green;
+	align-self: center;
+}
+
+.btn.lightMod {
+	color: dodgerblue;
+	align-self: center;
+}
+
+
+/* On mouse-over */
+.btn:hover {background: rgb(61, 60, 65);}
+
 
 /*************
  * Web Games *
