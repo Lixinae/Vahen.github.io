@@ -11,8 +11,9 @@ $(document).ready(function(){
 	createClickableLoadPage('#MenuWebCrawler',"/pages/projets/WebCrawler.html","WebCrawler");
 	//createClickableLoadPage('#MenuAnimationPython',"/pages/projets/AnimationPython.html","AnimationPython");
 	
-	createClickableLoadPage('#MenuContact',"/pages/Contact.html","Contact");
+	//createClickableLoadPage('#MenuContact',"/pages/Contact.html","Contact");
 	createClickableLoadPage('#MenuWhoAmI',"/pages/WhoAmI.html","WhoAmI");
+	createClickableLoadPage('#MenuCoinGN',"/pages/CoinGN.html","CoinGN");
 });
 
 /*
